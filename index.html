@@ -7,35 +7,42 @@
 </head>
 
 <body>
-
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="column left">
-
-                        <h1 class="text-dark">Do you want to know your Akan name?</h1>
-                        <p> Akan names are derived from Ghanian culture. Frequently in Ghana,children are given their
-                            first name as a 'day name' which corresponds to the day in the week they were born.
-                            Enter your birthday and you will see the day of the week you were born,then your Akan Name
-                            will be displayed based on your gender.</p>
+    <section class="akana" id="akana">
+      <div class="max-width">
+        <h2 class="title">Do you want to know your Akan name?</h2>
+        <div class="akana-content">
+          <div class="column left">
+            <div class="text"></div>
+            <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a
+              'day name'
+              which corresponds to the day in the week they were born</p>
+          </div>
+          <div class="column right">
+            <div class="text">Enter your date of Birth and Submit</div>
+  
+            <form name="user_form" class="form-inline">
+              <div class="form-group">
+  
+                <div class="fields">
+                  <div class="form-group field name">
+                    <label>DOB:</label>
+                    <input id="user_DOB" name="user_DOB" type="text" required placeholder="DD/MM/YYYY">
+                  </div>
+                  <div class="field email">
+                    <div>
+                      <label>Gender:</label>
+                      <select class="form-control field email" id="gender" name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                      </select>
                     </div>
-                </div>
-                <div class="col-md-8">
-                    <h1 class="text-dark">Enter your DOB</h1>
-                    <div class="column right">
-                        <div class="text">Enter your date of Birth and Submit</div>
-              
-                        <form name="user_form" class="form-inline">
-                          <div class="form-group">
-              
-                            <div class="fields">
-                              <div class="form-group field name">
-                                <label>DOB:</label>
-                                <input id="user_DOB" name="user_DOB" type="text" required placeholder="DD/MM/YYYY">
-                              </div>              
-            </div>
+                  </div>
+            </form>
+            <script type="text/javascript" src="js/logic.js"></script>
+          </div>
         </div>
-    </body>
+      </div>
+    </section>
+  </body>
 
 </html>
