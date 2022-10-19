@@ -56,7 +56,7 @@ function user_Action(){
     //Century = enterYear.substr(0,2); // picks the century
     Year = enterYear.substr(2,2); // picks the year 
 
-    alert('You were born in the ' + Year + ' year of the ' + enterCentury + ' Century')
+    //alert('You were born in the ' + Year + ' year of the ' + enterCentury + ' Century')
     
 
     const birthCentury = century(enterCentury)
@@ -74,7 +74,7 @@ function user_Action(){
         result = femaleNames[wholeNumber]
     }else{
     }
-    alert('And So Your Akana  day name is :' + result)
+    alert('Hey ,your Akana name is : ' + result)
     return true;
 }
 }
