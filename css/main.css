@@ -4,72 +4,87 @@
     font-family: 'Poppins', sans-serif;
     background-color: rgb(145, 242, 242);
 }
-section{
+
+section {
     padding: 100px 0;
 }
-.akana .akana-content{
+
+.akana .akana-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 
-.max-width{
+.max-width {
     max-width: 1300px;
     padding: 0 50px;
     margin: auto;
 }
 
-.akana .akana-content .column{
+.akana .akana-content .column {
     width: calc(50% - 30px);
 }
-.akana .akana-content .text{
+
+.akana .akana-content .text {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.akana .akana-content .left p{
+
+.akana .akana-content .left p {
     text-align: justify;
 }
-.akana .akana-content .left .icons{
+
+.akana .akana-content .left .icons {
     margin: 10px 0;
 }
-.akana .akana-content .row{
+
+.akana .akana-content .row {
     display: flex;
     height: 65px;
     align-items: center;
 }
-.akana .akana-content .row .info{
+
+.akana .akana-content .row .info {
     margin-left: 30px;
 }
-.akana .akana-content .row i{
+
+.akana .akana-content .row i {
     font-size: 25px;
     color: crimson;
 }
-.akana .akana-content .info .head{
+
+.akana .akana-content .info .head {
     font-weight: 500;
 }
-.akana .akana-content .info .sub-title{
+
+.akana .akana-content .info .sub-title {
     color: #333;
 }
-.akana .right form .fields{
+
+.akana .right form .fields {
     display: flex;
 }
+
 .akana .right form .field,
-.akana .right form .fields .field{
+.akana .right form .fields .field {
     height: 45px;
     width: 100%;
     margin-bottom: 15px;
 }
-.akana .right form .textarea{
+
+.akana .right form .textarea {
     height: 80px;
     width: 100%;
 }
-.akana .right form .name{
+
+.akana .right form .name {
     margin-right: 10px;
 }
+
 .akana .right form .field input,
-.akana .right form .textarea textarea{
+.akana .right form .textarea textarea {
     height: 100%;
     width: 100%;
     border: 1px solid lightgrey;
@@ -80,34 +95,39 @@ section{
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
 }
+
 .akana .right form .field input:focus,
-.akana .right form .textarea textarea:focus{
+.akana .right form .textarea textarea:focus {
     border-color: #b3b3b3;
 }
-.akana .right form .textarea textarea{
-  padding-top: 10px;
-  resize: none;
+
+.akana .right form .textarea textarea {
+    padding-top: 10px;
+    resize: none;
 }
-.akana .right form .button-area{
-  display: flex;
-  align-items: center;
+
+.akana .right form .button-area {
+    display: flex;
+    align-items: center;
 }
-.right form .button-area button{
-  color: #fff;
-  display: block;
-  width: 160px!important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
+
+.right form .button-area button {
+    color: rgb(12, 237, 132);
+    display: block;
+    width: 160px !important;
+    height: 45px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: crimson;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
 }
-.right form .button-area button:hover{
-  color: crimson;
-  background: none;
+
+.right form .button-area button:hover {
+    color: crimson;
+    background: none;
 }
