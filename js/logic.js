@@ -1,3 +1,4 @@
+//contant arrays to hold male and female names
 const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
@@ -18,7 +19,7 @@ function user_Action(){
 					form.dob.focus();
 					return false;
 				}
-				// year value between 1902 and 2021
+				// year value between 1902 and 2022
 				if(regs[3] > (new Date()).getFullYear()) {
 					alert("Please enter a valid year: " + regs[3] + " - must be less than or equal to  " + (new Date()).getFullYear());
 					user_form.user_DOB.focus();
@@ -74,7 +75,8 @@ function user_Action(){
         result = femaleNames[wholeNumber]
     }else{
     }
-    alert('Hey ,your Akana name is : ' + result)
+    //display a user's akan name on the screen
+    alert('Hey ,your Akan name is : ' + result)
     return true;
 }
 }
