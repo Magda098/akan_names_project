@@ -1,8 +1,8 @@
-# _{Akan_Names_Week2}_
+# _{Akan_Names}_
 
 #### By _**{Maggy}**_
 
-#### https://github.com/Magda098/akan_names_project
+#### https://magda098.github.io/akan_names_project/
 
 ## Technologies Used
 
