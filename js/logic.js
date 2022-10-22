@@ -10,7 +10,7 @@ function user_Action() {
         //assigns the output ot the regular expression to variable regs
         regs = user_form.user_DOB.value.match(reg_exp)
         if (regs != null) {
-            // day value between 1 and 31
+            // Ensure date entered is a value between 1 and 31
             if (regs[1] < 1 || regs[1] > 31) {
                 alert("Please enter a valid date: " + regs[1]);
                 //places  the cursor back to the invalid input
@@ -67,11 +67,11 @@ function user_Action() {
 
         //alert('You were born in the ' + Year + ' year of the ' + enterCentury + ' Century')
 
-
         const birthCentury = century(enterCentury)
         const birthYear = year(Year)
         const birthMonth = month(enterMonth)
         //( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
+        //Calculates day of the week and rounds down the result to the neares integer.
         var day = Math.floor((birthCentury + birthYear + birthMonth + enterDate) % 7)
 
         var result;
