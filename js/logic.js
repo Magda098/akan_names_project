@@ -12,20 +12,20 @@ function user_Action() {
         if (regs != null) {
             // Ensure date entered is a value between 1 and 31
             if (regs[1] < 1 || regs[1] > 31) {
-                alert("Please enter a valid date: " + regs[1]);
+                alert("Please enter a date value between 1 and 31.You entered : " + regs[1]);
                 //places  the cursor back to the invalid input
                 user_form.user_DOB.focus();
                 return false;
             }
             // month value between 1 and 12
             if (regs[2] < 1 || regs[2] > 12) {
-                alert("Please enter a valid month: " + regs[2]);
+                alert("Please enter a month between 1 and 12.You entered : "  + regs[2]);
                 form.dob.focus();
                 return false;
             }
             // year value between 1902 and 2022
             if (regs[3] > (new Date()).getFullYear()) {
-                alert("Please enter a valid year: " + regs[3] + " - must be less than or equal to  " + (new Date()).getFullYear());
+                alert("You entered year as: " + regs[3] + ". Year must be less than or equal to " + (new Date()).getFullYear());
                 user_form.user_DOB.focus();
                 return false;
             }
