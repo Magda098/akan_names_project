@@ -5,11 +5,15 @@ const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 function user_Action() {
     document.user_form.action = "index.html";
     reg_exp = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
+    //checks whether dob is empty,matches reg expression
     if (user_form.user_DOB.value != '') {
-        if (regs = user_form.user_DOB.value.match(reg_exp)) {
+        //assigns the output ot the regular expression to variable regs
+        regs = user_form.user_DOB.value.match(reg_exp)
+        if (regs != null) {
             // day value between 1 and 31
             if (regs[1] < 1 || regs[1] > 31) {
                 alert("Please enter a valid date: " + regs[1]);
+                //places  the cursor back to the invalid input
                 user_form.user_DOB.focus();
                 return false;
             }
@@ -44,18 +48,22 @@ function user_Action() {
             return (26 * (MM + 1) / 10);
         }
 
-        // this function splits the century of that year entered
+        // this function gets the century of the year entered
         function centuryFromYear(year) {
-            return Math.ceil(year / 100)
+            return Math.floor(year / 100)
         }
 
-        var enterCentury = centuryFromYear(regs[3])
-        var enterYear = regs[3]
-        var enterMonth = regs[2]
-        var enterDate = regs[1]
-        var gender = document.getElementById('gender').value // picks the genter entered in the dropdown 
-        //Century = enterYear.substr(0,2); // picks the century
-        Year = enterYear.substr(2, 2); // picks the year 
+        var enterCentury = centuryFromYear(Number(regs[3]))
+        var enterYear = Number(regs[3])
+        var enterMonth = Number(regs[2])
+        var enterDate = Number(regs[1])
+
+        // pick the genter selected in the dropdown 
+        var gender = document.getElementById('gender').value
+        // picks the year 
+        //Year = enterYear.substr(2, 2); 
+
+        Year = Number(enterYear) % 100;
 
         //alert('You were born in the ' + Year + ' year of the ' + enterCentury + ' Century')
 
@@ -63,17 +71,15 @@ function user_Action() {
         const birthCentury = century(enterCentury)
         const birthYear = year(Year)
         const birthMonth = month(enterMonth)
+        //( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
+        var day = Math.floor((birthCentury + birthYear + birthMonth + enterDate) % 7)
 
-        var calculationResults = (birthCentury + birthYear + birthMonth + enterDate) % 7
-        const wholeNumber = calculationResults.toPrecision(1);
-        //alert(wholeNumber)
         var result;
         if (gender == "Male") {
-            result = maleNames[wholeNumber]
+            result = maleNames[day]
 
         } else if (gender == "Female") {
-            result = femaleNames[wholeNumber]
-        } else {
+            result = femaleNames[day]
         }
         //display a user's akan name on the screen
         alert('Hey ,your Akan name is : ' + result)
