@@ -71,8 +71,8 @@ function user_Action() {
         const birthYear = year(Year)
         const birthMonth = month(enterMonth)
         //( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
-        //Calculates day of the week and rounds down the result to the neares integer.
-        var day = Math.floor((birthCentury + birthYear + birthMonth + enterDate) % 7)
+        //Calculates day of the week and rounds down the absolute value of the result to the nearest integer.
+        var day = Math.floor(Math.abs((birthCentury + birthYear + birthMonth + enterDate) % 7))
 
         var result;
         if (gender == "Male") {
